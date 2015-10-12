@@ -1,13 +1,19 @@
+set nocompatible
 set title
 execute pathogen#infect()
 set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
 syntax on
-set background=light
+set background=dark
 filetype plugin indent on
 set expandtab
 set ts=4
 set sw=4
 set sts=4
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 "autocmd FileType javascript setlocal sw=2 ts=2 sts=2 et
 "autocmd FileType json setlocal sw=2 ts=2 sts=2 et
