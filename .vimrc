@@ -4,13 +4,14 @@ execute pathogen#infect()
 set t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
-syntax on
 set background=dark
+syntax on
 filetype plugin indent on
 set expandtab
 set ts=4
 set sw=4
 set sts=4
+set ttymouse=xterm2
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %

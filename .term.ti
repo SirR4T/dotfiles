@@ -1,0 +1,18 @@
+# Lifted from https://gist.github.com/KevinGoodsell/744284
+# Wonderful explanation of terminfo, vim, and screens
+status-addon|Extra attributes for window title as status line,
+# Set up "status line", which is actually the window title.
+        hs, wsl#60, dsl=\E]2;\007, tsl=\E]2;, fsl=\007,
+
+gnome-256color|GNOME Terminal with xterm 256-colors,
+# Reset the background color before clearing the alt screen buffer:
+        rmcup=\E[49m\E[2J\E[?47l\E8,
+        use=status-addon,
+        use=gnome-256color,
+
+screen-256color-bce|GNU Screen with 256 colors and BCE,
+# Reset the background color and clear the line before leaving alt
+# screen buffer:
+        rmcup=\E[49m\E[2K\E[?1049l,
+        use=status-addon,
+        use=screen-256color-bce,

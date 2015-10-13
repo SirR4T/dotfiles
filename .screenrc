@@ -1,0 +1,10 @@
+term screen-256color-bce
+termcapinfo gnome* XT
+defbce on
+altscreen on
+screen -t rechargeAdmin bash -c 'cd ../recharge-admin && ./scripts/runserver.sh'
+screen -t gateway 1
+screen -t mocha 2
+screen -t ffrecharge node app.js -v
+screen -t testStub node test/stub/index.js
+select 1
