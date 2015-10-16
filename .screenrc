@@ -1,5 +1,5 @@
 term screen-256color-bce
-termcapinfo gnome* XT
+termcapinfo gnome* XT:ti@:te@
 defbce on
 altscreen on
 screen -t rechargeAdmin bash -c 'cd ../recharge-admin && ./scripts/runserver.sh'
